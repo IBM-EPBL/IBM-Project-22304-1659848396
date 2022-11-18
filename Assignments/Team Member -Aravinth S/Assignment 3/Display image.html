@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" href="D:\Dharani\Display image.css"></link>
+    
+</head>
+<h1>5 Images</h1>
+<body>
+    
+    <div class="container">
+
+	<div class="gallery">
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="https://s3.jp-tok.cloud-object-storage.appdomain.cloud/storage-assignment-3/1.jpg">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="https://s3.jp-tok.cloud-object-storage.appdomain.cloud/storage-assignment-3/2.jpg">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="https://s3.jp-tok.cloud-object-storage.appdomain.cloud/storage-assignment-3/3.jpg">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="https://s3.jp-tok.cloud-object-storage.appdomain.cloud/storage-assignment-3/4.jpg">
+		</div>
+
+		<div class="gallery-item">
+			<img class="gallery-image" src="https://s3.jp-tok.cloud-object-storage.appdomain.cloud/storage-assignment-3/5.jpg">
+		</div>
+	</div>
+
+</div>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "748e6d62-7b10-4d52-afe2-3f8835348878", // The ID of this integration.
+    region: "us-south", // The region your integration is hosted in.
+    serviceInstanceID: "fe43b008-d03c-49ec-8be4-252a4849ad67", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
