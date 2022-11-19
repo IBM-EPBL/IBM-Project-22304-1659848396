@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plasma Donor App</title>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+	<link rel="stylesheet" href="style.css">
+     
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+
+<body>
+<div class="background-image"></div>
+<div class="header">
+<div>Plasma Donor App</div>
+	<ul>
+		
+		
+		
+		<li><a href="/register.html">Register</a></li>
+		<li><a class="active" href="/login">Home</a></li>
+		<li><a href="/about">About</a></li>
+	</ul>
+</div>
+ <div class="login" >
+		<div>
+		</div>
+
+   
+    <form action="{{ url_for('loginpage')}}"method="post">
+    	<input type="text" name="user" placeholder="Enter UserName" required="required" style="color:black" />
+        <input type="password" name="passw" placeholder="Enter Password" required="required" style="color:black" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    
+    </form>
+<br><br>
+<div style="color:black">
+</div>
+ </div>
+
+</body>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.background-image {
+		background-image: url('https://media.istockphoto.com/id/539184209/photo/man-giving-blood-donation.jpg?s=612x612&w=0&k=20&c=vUYqEB1swHndxA5q71Gbpt0j8APTWtvyS0ucKpkVPPo=');
+		background-size:cover;
+		background-repeat: no-repeat;
+		height: 100vh;
+	}
+</style>
+</html>
