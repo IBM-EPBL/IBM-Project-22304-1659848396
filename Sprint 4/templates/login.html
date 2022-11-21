@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plasma Donor App</title>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> -->
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="/static/style.css">
+     
+<style>
+.login{
+top: 20%;
+}
+</style>
+</head>
+
+<body>
+<div class="background-image"></div>
+<div class="header">
+<div>Plasma Donor App</div>
+	<ul>
+		
+		
+		
+		<li><a href="/register">Register</a></li>
+		<li><a class="active" href="/login">Home</a></li>
+		<li><a href="/about">About</a></li>
+	</ul>
+</div>
+ <div class="login" >
+		<div>
+		</div>
+
+   
+    <form action="{{ url_for('login')}}"method="post">
+    	<input type="text" name="user" placeholder="Enter UserName" required="required" style="color:black" />
+        <input type="password" name="passw" placeholder="Enter Password" required="required" style="color:black" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Login</button>
+    
+    </form>
+<br><br>
+<div style="color:black">
+</div>
+ </div>
+ <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "cd1eaf39-45e4-49f0-ad10-066f2d566bae", // The ID of this integration.
+      region: "us-south", // The region your integration is hosted in.
+      serviceInstanceID: "6ca792b1-395b-43da-8b26-216e6baeb2b8", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	.background-image {
+		background-image: url('https://media.istockphoto.com/id/539184209/photo/man-giving-blood-donation.jpg?s=612x612&w=0&k=20&c=vUYqEB1swHndxA5q71Gbpt0j8APTWtvyS0ucKpkVPPo=');
+		background-size:cover;
+		background-repeat: no-repeat;
+		height: 100vh;
+	}
+</style>
+</html>
